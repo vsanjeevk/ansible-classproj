@@ -1,8 +1,9 @@
 ---
 - hosts: web
-  sudo: yes
+  become: yes
   gather_facts: yes
   roles:
     - role: webserver  
       when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
     - role: users
+    - role: install

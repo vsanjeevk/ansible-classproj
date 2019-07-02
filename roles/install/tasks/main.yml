@@ -1,8 +1,8 @@
 ---
 # tasks file for install
 - name: install some apps using iteration
-  yum: name={{item}}
-  with_items:
-    - git
-    - ntp
-    - vim-enhanced
+  yum:
+    name:
+      - git
+      - ntp
+      - vim-enhanced
