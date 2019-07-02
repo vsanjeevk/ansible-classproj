@@ -10,3 +10,9 @@
    - restart httpd
 - name: Copy the index.html
   template: src=index.html.j2 dest={{httpdocroot}}/index.html
+- name: copying a script file with owner and permissions
+  copy:
+    src: test.sh
+    dest: /tmp/test.sh
+    mode: 0755
+- script: /tmp/test.sh
