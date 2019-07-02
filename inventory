@@ -1,0 +1,13 @@
+[web]
+192.168.11.129 ansible_become=yes ansible_user=sanjeev myname=sanjeev mycomp=hpe
+192.168.11.136 ansible_become=yes ansible_user=sanjeev myname=sanjeev mycomp=hpe
+localhost ansible_connection=local ansible_become=yes myname=sanjeev mycomp=hpe
+
+[everything:children]
+web
+
+[web:vars]
+myname=sanjeevkumar
+mycomp=hp
+myage=8
+

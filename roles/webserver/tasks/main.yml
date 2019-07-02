@@ -1,0 +1,12 @@
+---
+# tasks file for webserver
+- name: Install the httpd apps
+  yum: name=httpd
+- name: start the httpd service
+  service: name=httpd state=started
+- name: Copy the httpd conf file
+  template: src=httpd.conf.j2 dest={{httpdconfdir}}/httpd.conf
+  notify:
+   - restart httpd
+- name: Copy the index.html
+  template: src=index.html.j2 dest={{httpdocroot}}/index.html

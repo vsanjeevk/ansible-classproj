@@ -1,0 +1,5 @@
+---
+# vars file for webserver
+httpdocroot: /var/www/html
+httpdconfdir: /etc/httpd/conf
+httplistenport: 8080
