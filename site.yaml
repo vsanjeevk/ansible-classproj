@@ -3,4 +3,5 @@
   sudo: yes
   gather_facts: yes
   roles:
-    - role: webserver
+    - role: webserver  
+      when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
