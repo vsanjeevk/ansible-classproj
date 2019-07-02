@@ -5,3 +5,4 @@
   roles:
     - role: webserver  
       when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+    - role: users
